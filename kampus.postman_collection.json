@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "2bdd9409-59e1-4585-a465-7444f1055d9e",
+		"name": "kampus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49107956",
+		"_collection_link": "https://renatavania-8006984.postman.co/workspace/renatavania's-Workspace~5e6a797b-6104-415d-8d49-995e71d3a6f1/collection/49107956-2bdd9409-59e1-4585-a465-7444f1055d9e?action=share&source=collection_link&creator=49107956"
+	},
+	"item": [
+		{
+			"name": "students",
+			"item": [
+				{
+					"name": "list students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6060/api/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detail students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6060/api/students/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"students",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create students",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"major\": \"Informatika\",\r\n  \"age\": 22\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6060/api/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update students",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"id\": 1,\r\n        \"name\": \"Renata Vania\",\r\n        \"major\": \"Sistem Informasi\",\r\n        \"age\": 20\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6060/api/students/:id\n",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"students",
+								":id\n"
+							],
+							"variable": [
+								{
+									"key": "id\n",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete students",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6060/api/students/2\n",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"students",
+								"2\n"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
